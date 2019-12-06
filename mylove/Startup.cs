@@ -23,7 +23,9 @@ namespace mylove
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //在引入Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation，版本是V3.0.0  后可以 使用 AddRazorRuntimeCompilation（） 目的是 让模板文件在运行时进行编译
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,14 +45,22 @@ namespace mylove
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //加载区域 mvc
+                endpoints.MapAreaControllerRoute(
+                name: "areas", "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=t}/{id?}");
+
+                //加载 Razor 页面
+                //endpoints.MapRazorPages();
             });
         }
     }
