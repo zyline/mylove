@@ -20,5 +20,10 @@ namespace mylove.Controllers.Api
         {
             return "你好，我是测试！";
         }
+        [Route("ttt")]
+        public IActionResult myt()
+        {
+            return Content("ddddddddddddddddddd");
+        }
     }
 }

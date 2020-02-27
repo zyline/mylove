@@ -2,8 +2,49 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <h1 class="display-5">zysky.xin</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <h3>
+            @Model.sitename
+        </h3>
+        <h4>
+            @Model.dict["info"]
+        </h4>
+        <h5>
+            @Model.dict["dict"]["a"]
+        </h5>
+        @Model.dict["json"]
+        <p>
+            @Model.dict["data"]
+        </p>
+        <hr />
+        <div style="text-align:left;">
+            @{
+                System.Data.DataTable dt = Model.dict["data"];// (System.Data.DataTable)ViewData["dt"];
+                if (dt.Rows.Count < 1 && dt == null)
+                {
+                    <p>
+                        ● <a href="#">关于"易道稳诺五六七控糖法"列入辩证堂中医药研究院科技成果推广项目的通知。</a><br />
+                        ● <a href="#">辩证堂中医药研究院推广项目公告</a><br />
+                        ● <a href="#">关于召开"2012中医治疗糖尿病论坛"的通知</a><br />
+                        ● <a href="#">关于美国营养保健交流学术会议参观我院的重要通知</a><br />
+                    </p>
+                }
+                else
+                {
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        //string path = "newsDetail.aspx?type=6&id=" + dt.Rows[i]["news_id"];
+                        <text>
+                            ● @dt.Rows[i]["title"];
+                            <br />
+                        </text>
+
+                    }
+
+                }
+            }
+        </div>
+    </div>

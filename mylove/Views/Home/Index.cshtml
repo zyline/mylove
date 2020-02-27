@@ -38,8 +38,10 @@
                     {
                         //string path = "newsDetail.aspx?type=6&id=" + dt.Rows[i]["news_id"];
                         <text>
-                            ● @dt.Rows[i]["title"];
-                            <br />
+                                    <p>
+                                                                <a href="/my/detail/?id=@dt.Rows[i]["id"]"> ● @dt.Rows[i]["title"];@dt.Rows[i]["addtime"];</a>
+                                        <br />
+                                    </p>
                         </text>
 
                     }

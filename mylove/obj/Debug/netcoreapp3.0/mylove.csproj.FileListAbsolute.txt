@@ -416,3 +416,6 @@ F:\github\mylove\mylove\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
 F:\github\mylove\mylove\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\github\mylove\mylove\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\github\mylove\mylove\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\github\mylove\mylove\obj\Debug\netcoreapp3.0\mylove.csprojAssemblyReference.cache
+F:\github\mylove\mylove\obj\Debug\netcoreapp3.0\Razor\Areas\love\Views\Home\Index.cshtml.g.cs
+F:\github\mylove\mylove\obj\Debug\netcoreapp3.0\Razor\Areas\love\Views\Home\t.cshtml.g.cs

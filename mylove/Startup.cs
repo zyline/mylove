@@ -52,12 +52,12 @@ namespace mylove
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index1}/{id?}");
 
                 //加载区域 mvc
                 endpoints.MapAreaControllerRoute(
-                name: "areas", "areas",
-                pattern: "{area:exists}/{controller=Home}/{action=t}/{id?}");
+                name: "love", "love",
+                pattern: "love/{controller=Home}/{action=Index}/{id?}");
 
                 //加载 Razor 页面
                 //endpoints.MapRazorPages();
